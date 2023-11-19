@@ -11,6 +11,7 @@
     "clean:workspaces": "turbo clean",
     "postinstall": "pnpm lint:ws",
     "db:push": "pnpm -F db push",
+    "db:migration": "pnpm -F db migration",
     "db:studio": "pnpm -F db studio",
     "dev": "turbo dev --parallel",
     "format": "turbo format --continue -- --cache --cache-location='node_modules/.cache/.prettiercache'",
@@ -21,7 +22,7 @@
     "typecheck": "turbo typecheck"
   },
   "devDependencies": {
-    "@acme/prettier-config": "workspace:^0.1.0",
+    "@cashed/prettier-config": "workspace:^0.1.0",
     "@turbo/gen": "^1.10.16",
     "prettier": "^3.0.3",
     "turbo": "^1.10.16",
@@ -32,5 +33,5 @@
       "@auth/core": "0.18.0"
     }
   },
-  "prettier": "@acme/prettier-config"
+  "prettier": "@cashed/prettier-config"
 }

@@ -1,5 +1,5 @@
 {
-  "name": "@acme/db",
+  "name": "@cashed/db",
   "version": "0.1.0",
   "private": true,
   "main": "./index.ts",
@@ -9,6 +9,7 @@
     "clean": "rm -rf .turbo node_modules",
     "lint": "eslint .",
     "format": "prettier --check . --ignore-path ../../.gitignore",
+    "migration": "drizzle-kit generate:mysql",
     "push": "drizzle-kit push:mysql",
     "studio": "drizzle-kit studio",
     "typecheck": "tsc --noEmit"
@@ -18,20 +19,21 @@
     "drizzle-orm": "^0.29.0"
   },
   "devDependencies": {
-    "@acme/eslint-config": "workspace:^0.2.0",
-    "@acme/prettier-config": "workspace:^0.1.0",
-    "@acme/tsconfig": "workspace:^0.1.0",
+    "@cashed/eslint-config": "workspace:^0.2.0",
+    "@cashed/prettier-config": "workspace:^0.1.0",
+    "@cashed/tsconfig": "workspace:^0.1.0",
     "dotenv-cli": "^7.3.0",
-    "drizzle-kit": "^0.19.13",
+    "drizzle-kit": "^0.20.4",
     "eslint": "^8.53.0",
     "prettier": "^3.0.3",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "zod": "^3.22.2"
   },
   "eslintConfig": {
     "root": true,
     "extends": [
-      "@acme/eslint-config/base"
+      "@cashed/eslint-config/base"
     ]
   },
-  "prettier": "@acme/prettier-config"
+  "prettier": "@cashed/prettier-config"
 }
